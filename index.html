@@ -1,17 +1,111 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LinkBridge</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .card{
+            width:700px;
+            background:#1e293b;
+            border-radius:20px;
+            padding:40px;
+            box-shadow:0 20px 40px rgba(0,0,0,.35);
+            text-align:center;
+        }
+
+        h1{
+            font-size:3rem;
+            margin-bottom:10px;
+            color:#38bdf8;
+        }
+
+        h2{
+            font-size:1.3rem;
+            margin-bottom:30px;
+            color:#22c55e;
+        }
+
+        p{
+            margin:12px 0;
+            color:#cbd5e1;
+            line-height:1.5;
+        }
+
+        .status{
+            margin-top:30px;
+            padding:18px;
+            border-radius:12px;
+            background:#14532d;
+            color:#bbf7d0;
+            font-weight:bold;
+        }
+
+        .footer{
+            margin-top:35px;
+            font-size:.9rem;
+            color:#94a3b8;
+        }
+
+        .badge{
+            display:inline-block;
+            margin-top:20px;
+            padding:10px 18px;
+            border-radius:999px;
+            background:#0ea5e9;
+            color:white;
+            font-weight:bold;
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Hello World!</h1>
 
-    <p>Welcome to LinkBridge.</p>
+<div class="card">
 
-    <p><strong>Version 0.2</strong></p>
+    <h1>LinkBridge</h1>
 
-    <p>Built through AWS CI/CD Pipeline.</p>
+    <h2>Version 0.5</h2>
+
+    <p>
+        Hello World from AWS ECS Fargate.
+    </p>
+
+    <p>
+        This page is deployed automatically using an AWS CI/CD Pipeline.
+    </p>
+
+    <div class="badge">
+        🚀 Automatic Deployment Enabled
+    </div>
+
+    <div class="status">
+        Deployment: CodePipeline Trigger Test
+    </div>
+
+    <div class="footer">
+        Sprint 1 • Version 0.4 • September 2026
+    </div>
+
+</div>
+
 </body>
 </html>
