@@ -1,0 +1,11 @@
+# VS Code
+.vscode/
+
+# macOS
+.DS_Store
+
+# Environment variables (future)
+.env
+
+# Node modules (future React app)
+node_modules/
