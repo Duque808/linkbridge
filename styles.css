@@ -1,24 +1,49 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
+
 
 body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #071426;
-  color: #e5eef9;
-  height: 100vh;
+    margin: 0;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: #071426;
+
+    color: #e5eef9;
+
+    height: 100vh;
 }
+
 
 button,
-textarea {
-  font-family: inherit;
+textarea,
+input,
+select {
+    font-family: inherit;
 }
 
+
+button {
+    cursor: pointer;
+}
+
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
 .app {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100vh;
 }
 
 
@@ -27,70 +52,154 @@ textarea {
 ========================= */
 
 .header {
-  height: 72px;
-  background: #0d1b2f;
-  border-bottom: 1px solid #20324d;
+    height: 72px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    background: #0d1b2f;
 
-  padding: 0 28px;
+    border-bottom:
+        1px solid #20324d;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 28px;
 }
+
 
 .brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
 }
+
 
 .brand-icon {
-  font-size: 30px;
+    font-size: 30px;
 }
+
 
 .brand h1 {
-  margin: 0;
-  font-size: 22px;
-  color: #38bdf8;
+    margin: 0;
+
+    font-size: 22px;
+
+    color: #38bdf8;
 }
+
 
 .brand span {
-  display: block;
-  margin-top: 2px;
-  color: #8193aa;
-  font-size: 12px;
+    display: block;
+
+    margin-top: 2px;
+
+    color: #8193aa;
+
+    font-size: 12px;
 }
+
+
+.header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+}
+
 
 .user-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
 }
+
 
 .user-avatar {
-  width: 38px;
-  height: 38px;
+    width: 38px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 38px;
 
-  border-radius: 50%;
+    display: flex;
 
-  background: #0ea5e9;
-  color: white;
+    align-items: center;
 
-  font-weight: bold;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #0ea5e9;
+
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 13px;
 }
+
 
 .user-info strong {
-  display: block;
-  font-size: 14px;
+    display: block;
+
+    font-size: 14px;
 }
 
+
 .user-info span {
-  font-size: 12px;
-  color: #94a3b8;
+    font-size: 12px;
+
+    color: #94a3b8;
+}
+
+
+.online-status {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.status-dot {
+    display: inline-block;
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+}
+
+
+.admin-button {
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 9px 15px;
+
+    background: #0ea5e9;
+
+    color: white;
+
+    font-weight: bold;
+
+    transition:
+        background 0.15s;
+}
+
+
+.admin-button:hover {
+    background: #38bdf8;
 }
 
 
@@ -99,9 +208,11 @@ textarea {
 ========================= */
 
 .main {
-  flex: 1;
-  display: flex;
-  min-height: 0;
+    flex: 1;
+
+    display: flex;
+
+    min-height: 0;
 }
 
 
@@ -110,130 +221,193 @@ textarea {
 ========================= */
 
 .sidebar {
-  width: 280px;
+    width: 280px;
 
-  background: #0b1729;
+    background: #0b1729;
 
-  border-right: 1px solid #20324d;
+    border-right:
+        1px solid #20324d;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
+
+    flex-direction: column;
 }
+
 
 .sidebar-header {
-  height: 64px;
+    height: 64px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
 
-  padding: 0 18px;
+    align-items: center;
 
-  border-bottom: 1px solid #20324d;
+    padding: 0 18px;
+
+    border-bottom:
+        1px solid #20324d;
 }
+
 
 .sidebar-header h2 {
-  margin: 0;
+    margin: 0;
 
-  font-size: 15px;
-  color: #dce8f5;
+    font-size: 15px;
+
+    color: #dce8f5;
 }
 
-.new-conversation {
-  width: 30px;
-  height: 30px;
 
-  border: none;
-  border-radius: 8px;
+.user-list {
+    overflow-y: auto;
 
-  background: #0ea5e9;
-  color: white;
-
-  font-size: 20px;
-
-  cursor: pointer;
+    padding: 8px;
 }
 
-.new-conversation:hover {
-  background: #38bdf8;
+
+.user-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px;
+
+    margin-bottom: 4px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s;
 }
 
-.conversation-list {
-  overflow-y: auto;
-  padding: 8px;
+
+.user-item:hover {
+    background: #14263f;
 }
 
-.conversation {
-  display: flex;
-  align-items: center;
 
-  gap: 12px;
-
-  padding: 12px;
-
-  margin-bottom: 4px;
-
-  border-radius: 10px;
-
-  cursor: pointer;
-
-  transition: background 0.15s;
+.user-item.active {
+    background: #183653;
 }
 
-.conversation:hover {
-  background: #14263f;
-}
-
-.conversation.active {
-  background: #183653;
-}
 
 .avatar {
-  width: 40px;
-  height: 40px;
+    width: 40px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    height: 40px;
 
-  border-radius: 50%;
+    display: flex;
 
-  background: #1e3a5f;
+    align-items: center;
 
-  color: #7dd3fc;
+    justify-content: center;
 
-  font-weight: bold;
+    border-radius: 50%;
 
-  flex-shrink: 0;
+    background: #1e3a5f;
+
+    color: #7dd3fc;
+
+    font-weight: bold;
+
+    flex-shrink: 0;
 }
 
-.conversation-info {
-  min-width: 0;
+
+.avatar.small {
+    width: 36px;
+
+    height: 36px;
+
+    font-size: 12px;
 }
 
-.conversation-name {
-  display: block;
 
-  font-size: 14px;
-  font-weight: bold;
-
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.user-info-list {
+    min-width: 0;
 }
 
-.conversation-preview {
-  display: block;
 
-  margin-top: 4px;
+.user-name {
+    display: block;
 
-  color: #71849c;
+    font-size: 14px;
 
-  font-size: 12px;
+    font-weight: bold;
 
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.user-preview {
+    display: block;
+
+    margin-top: 4px;
+
+    color: #71849c;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.empty-users {
+    padding: 35px 18px;
+
+    text-align: center;
+
+    color: #8193aa;
+}
+
+
+.empty-users-icon {
+    width: 44px;
+
+    height: 44px;
+
+    margin: 0 auto 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #14263f;
+
+    color: #7dd3fc;
+
+    font-weight: bold;
+}
+
+
+.empty-users p {
+    margin: 0 0 6px;
+
+    color: #dce8f5;
+
+    font-size: 13px;
+}
+
+
+.empty-users span {
+    font-size: 11px;
+
+    line-height: 1.4;
 }
 
 
@@ -242,49 +416,43 @@ textarea {
 ========================= */
 
 .chat {
-  flex: 1;
+    flex: 1;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
 
-  min-width: 0;
+    flex-direction: column;
+
+    min-width: 0;
 }
+
 
 .chat-header {
-  height: 64px;
+    height: 64px;
 
-  padding: 0 24px;
+    padding: 0 24px;
 
-  display: flex;
-  align-items: center;
+    display: flex;
 
-  border-bottom: 1px solid #20324d;
+    align-items: center;
 
-  background: #0c1a2e;
+    border-bottom:
+        1px solid #20324d;
+
+    background: #0c1a2e;
 }
+
 
 .chat-header h2 {
-  margin: 0 0 4px;
+    margin: 0 0 4px;
 
-  font-size: 17px;
+    font-size: 17px;
 }
+
 
 .chat-status {
-  color: #8193aa;
-  font-size: 12px;
-}
+    color: #8193aa;
 
-.status-dot {
-  display: inline-block;
-
-  width: 7px;
-  height: 7px;
-
-  margin-right: 5px;
-
-  border-radius: 50%;
-
-  background: #22c55e;
+    font-size: 12px;
 }
 
 
@@ -293,54 +461,105 @@ textarea {
 ========================= */
 
 .messages {
-  flex: 1;
+    flex: 1;
 
-  overflow-y: auto;
+    overflow-y: auto;
 
-  padding: 24px;
+    padding: 24px;
 
-  display: flex;
-  flex-direction: column;
+    display: flex;
 
-  gap: 12px;
+    flex-direction: column;
+
+    gap: 12px;
 }
+
 
 .message {
-  max-width: 70%;
+    max-width: 70%;
 
-  padding: 11px 14px;
+    padding: 11px 14px;
 
-  border-radius: 14px;
+    border-radius: 14px;
 
-  line-height: 1.4;
+    line-height: 1.4;
 
-  font-size: 14px;
+    font-size: 14px;
 }
+
 
 .message.received {
-  align-self: flex-start;
+    align-self: flex-start;
 
-  background: #14263f;
+    background: #14263f;
 
-  border-bottom-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
+
 
 .message.sent {
-  align-self: flex-end;
+    align-self: flex-end;
 
-  background: #0e7490;
+    background: #0e7490;
 
-  border-bottom-right-radius: 4px;
+    border-bottom-right-radius: 4px;
 }
 
+
 .message-time {
-  display: block;
+    display: block;
 
-  margin-top: 5px;
+    margin-top: 5px;
 
-  font-size: 10px;
+    font-size: 10px;
 
-  opacity: 0.65;
+    opacity: 0.65;
+}
+
+
+.empty-chat {
+    flex: 1;
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    color: #8193aa;
+}
+
+
+.empty-chat-icon {
+    font-size: 34px;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-chat h3 {
+    margin: 0 0 7px;
+
+    color: #dce8f5;
+
+    font-size: 17px;
+}
+
+
+.empty-chat p {
+    margin: 0;
+
+    max-width: 350px;
+
+    font-size: 13px;
+
+    line-height: 1.5;
 }
 
 
@@ -349,56 +568,65 @@ textarea {
 ========================= */
 
 .composer {
-  display: flex;
+    display: flex;
 
-  gap: 10px;
+    gap: 10px;
 
-  padding: 16px 20px;
+    padding: 16px 20px;
 
-  border-top: 1px solid #20324d;
+    border-top:
+        1px solid #20324d;
 
-  background: #0c1a2e;
+    background: #0c1a2e;
 }
+
 
 .composer textarea {
-  flex: 1;
+    flex: 1;
 
-  resize: none;
+    resize: none;
 
-  min-height: 44px;
-  max-height: 120px;
+    min-height: 44px;
 
-  padding: 12px 14px;
+    max-height: 120px;
 
-  border: 1px solid #29405e;
-  border-radius: 10px;
+    padding: 12px 14px;
 
-  background: #101f34;
-  color: white;
+    border:
+        1px solid #29405e;
 
-  outline: none;
+    border-radius: 10px;
+
+    background: #101f34;
+
+    color: white;
+
+    outline: none;
 }
+
 
 .composer textarea:focus {
-  border-color: #0ea5e9;
+    border-color: #0ea5e9;
 }
+
 
 .send-button {
-  width: 80px;
+    width: 80px;
 
-  border: none;
-  border-radius: 10px;
+    border: none;
 
-  background: #0ea5e9;
-  color: white;
+    border-radius: 10px;
 
-  font-weight: bold;
+    background: #0ea5e9;
 
-  cursor: pointer;
+    color: white;
+
+    font-weight: bold;
 }
 
-.send-button:hover {
-  background: #38bdf8;
+
+.send-button:hover:not(:disabled) {
+    background: #38bdf8;
 }
 
 
@@ -407,19 +635,363 @@ textarea {
 ========================= */
 
 .footer {
-  height: 30px;
+    height: 30px;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+    display: flex;
 
-  padding: 0 20px;
+    align-items: center;
 
-  background: #071426;
+    justify-content: space-between;
 
-  color: #60748c;
+    padding: 0 20px;
 
-  font-size: 10px;
+    background: #071426;
+
+    color: #60748c;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   ADMIN MODAL
+========================= */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition:
+        opacity 0.15s,
+        visibility 0.15s;
+}
+
+
+.modal.visible {
+    opacity: 1;
+
+    visibility: visible;
+}
+
+
+.modal-content {
+    width: min(
+        720px,
+        100%
+    );
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #0d1b2f;
+
+    border:
+        1px solid #29405e;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 20px 60px
+        rgba(0, 0, 0, 0.45);
+}
+
+
+.modal-header {
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: space-between;
+
+    padding: 20px 22px;
+
+    border-bottom:
+        1px solid #20324d;
+}
+
+
+.modal-header h2 {
+    margin: 0 0 5px;
+
+    font-size: 19px;
+}
+
+
+.modal-header span {
+    color: #8193aa;
+
+    font-size: 12px;
+}
+
+
+.close-button {
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #14263f;
+
+    color: #dce8f5;
+
+    font-size: 22px;
+
+    line-height: 1;
+}
+
+
+.close-button:hover {
+    background: #203b5a;
+}
+
+
+/* =========================
+   ADMIN SECTIONS
+========================= */
+
+.admin-section {
+    padding: 20px 22px;
+
+    border-bottom:
+        1px solid #20324d;
+}
+
+
+.admin-section:last-child {
+    border-bottom: none;
+}
+
+
+.admin-section h3 {
+    margin: 0 0 15px;
+
+    font-size: 14px;
+
+    color: #dce8f5;
+}
+
+
+/* =========================
+   CREATE USER FORM
+========================= */
+
+.create-user-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+.form-row {
+    display: flex;
+
+    gap: 12px;
+}
+
+
+.form-group {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.form-group label {
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+
+.form-group input,
+.form-group select {
+    width: 100%;
+
+    padding: 10px 11px;
+
+    border:
+        1px solid #29405e;
+
+    border-radius: 8px;
+
+    background: #101f34;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #0ea5e9;
+}
+
+
+.primary-button {
+    align-self: flex-start;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 10px 15px;
+
+    background: #0ea5e9;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+.primary-button:hover {
+    background: #38bdf8;
+}
+
+
+/* =========================
+   ADMIN USER LIST
+========================= */
+
+.admin-user-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.admin-user-row {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 11px;
+
+    border:
+        1px solid #20324d;
+
+    border-radius: 9px;
+
+    background: #0b1729;
+}
+
+
+.admin-user-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    min-width: 0;
+}
+
+
+.admin-user-info strong {
+    display: block;
+
+    font-size: 13px;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+.admin-user-info span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #8193aa;
+
+    font-size: 11px;
+}
+
+
+.admin-user-actions {
+    display: flex;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+}
+
+
+.secondary-button,
+.danger-button {
+    border: none;
+
+    border-radius: 7px;
+
+    padding: 7px 10px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+
+.secondary-button {
+    background: #1e3a5f;
+
+    color: #bae6fd;
+}
+
+
+.secondary-button:hover {
+    background: #294f7b;
+}
+
+
+.danger-button {
+    background: #4c1d1d;
+
+    color: #fca5a5;
+}
+
+
+.danger-button:hover {
+    background: #6b2525;
 }
 
 
@@ -429,33 +1001,76 @@ textarea {
 
 @media (max-width: 700px) {
 
-  .sidebar {
-    width: 90px;
-  }
+    .header {
+        padding: 0 14px;
+    }
 
-  .sidebar-header h2,
-  .conversation-info {
-    display: none;
-  }
 
-  .sidebar-header {
-    justify-content: center;
-  }
+    .brand span {
+        display: none;
+    }
 
-  .conversation {
-    justify-content: center;
-  }
 
-  .message {
-    max-width: 85%;
-  }
+    .user-info {
+        display: none;
+    }
 
-  .brand span {
-    display: none;
-  }
 
-  .user-info {
-    display: none;
-  }
+    .header-right {
+        gap: 8px;
+    }
+
+
+    .sidebar {
+        width: 90px;
+    }
+
+
+    .sidebar-header {
+        justify-content: center;
+    }
+
+
+    .sidebar-header h2 {
+        display: none;
+    }
+
+
+    .user-item {
+        justify-content: center;
+    }
+
+
+    .user-info-list {
+        display: none;
+    }
+
+
+    .message {
+        max-width: 85%;
+    }
+
+
+    .form-row {
+        flex-direction: column;
+    }
+
+
+    .admin-user-row {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+
+    .admin-user-actions {
+        width: 100%;
+    }
+
+
+    .secondary-button,
+    .danger-button {
+        flex: 1;
+    }
 
 }
