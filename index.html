@@ -6,94 +6,94 @@
   <title>LinkBridge</title>
 
   <style>
-    body{
-      margin:0;
-      font-family:Arial, Helvetica, sans-serif;
-      background:#03122f;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #03122f;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    .card{
-      background:#16233d;
-      padding:50px;
-      border-radius:20px;
-      text-align:center;
-      width:520px;
-      box-shadow:0 0 30px rgba(0,0,0,.35);
+    .card {
+      background: #16233d;
+      padding: 50px;
+      border-radius: 20px;
+      text-align: center;
+      width: 520px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, .35);
     }
 
-    h1{
-      color:#38bdf8;
-      font-size:56px;
-      margin-bottom:5px;
+    h1 {
+      color: #38bdf8;
+      font-size: 56px;
+      margin-bottom: 5px;
     }
 
-    .badge{
-      display:inline-block;
-      background:#0ea5e9;
-      padding:12px 24px;
-      border-radius:30px;
-      margin:25px 0;
-      font-weight:bold;
+    .badge {
+      display: inline-block;
+      background: #0ea5e9;
+      padding: 12px 24px;
+      border-radius: 30px;
+      margin: 25px 0;
+      font-weight: bold;
     }
 
-    .deploy{
-      background:#166534;
-      padding:16px;
-      border-radius:10px;
-      margin:25px 0;
-      font-weight:bold;
+    .deploy {
+      background: #166534;
+      padding: 16px;
+      border-radius: 10px;
+      margin: 25px 0;
+      font-weight: bold;
     }
 
-    .build{
-      color:#7dd3fc;
-      margin-top:15px;
+    .build {
+      color: #7dd3fc;
+      margin-top: 15px;
     }
 
-    footer{
-      margin-top:35px;
-      color:#94a3b8;
-      font-size:14px;
+    footer {
+      margin-top: 35px;
+      color: #94a3b8;
+      font-size: 14px;
     }
   </style>
 </head>
 
 <body>
 
-<div class="card">
+  <div class="card">
 
-  <h1>LinkBridge</h1>
+    <h1>LinkBridge</h1>
 
-  <h2>Version 0.7</h2>
+    <h2>Version 0.9</h2>
 
-  <p>Hello World from AWS ECS Fargate.</p>
+    <p>Hello World from AWS ECS Fargate.</p>
 
-  <p>This page is deployed automatically using an AWS CI/CD Pipeline.</p>
+    <p>This page was deployed automatically using GitHub CI/CD.</p>
 
-  <div class="badge">
-    🚀 Automatic Deployment Enabled
+    <div class="badge">
+      🚀 Automatic Deployment Enabled
+    </div>
+
+    <div class="deploy">
+      Deployment: Version 0.9 Live
+    </div>
+
+    <p class="build" id="build"></p>
+
+    <footer>
+      Sprint 1 • AWS ECS + CodePipeline + CodeBuild • September 2026
+    </footer>
+
   </div>
 
-  <div class="deploy">
-    Deployment: Version 0.7 Live
-  </div>
-
-  <p class="build" id="build"></p>
-
-  <footer>
-    Sprint 1 • AWS ECS + CodePipeline + CodeBuild • September 2026
-  </footer>
-
-</div>
-
-<script>
-document.getElementById("build").textContent =
-  "Build deployed at: " + new Date().toLocaleString();
-</script>
+  <script>
+    document.getElementById("build").textContent =
+      "Build deployed at: " + new Date().toLocaleString();
+  </script>
 
 </body>
 </html>
